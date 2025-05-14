@@ -1,99 +1,96 @@
-# Projeto de Redes Neurais Artificiais
+# Artificial Neural Networks Project
 
-Este projeto foi desenvolvido como parte da disciplina de Inteligência Artificial. Seu objetivo é aplicar e validar diferentes modelos de redes neurais artificiais (RNAs) — tanto lineares quanto não-lineares — em tarefas de regressão e classificação, incluindo problemas reais e sintéticos.
+This project was developed as part of the Artificial Intelligence course. Its goal is to apply and validate different artificial neural network (ANN) models — both linear and non-linear — in regression and classification tasks, including real-world and synthetic problems.
 
-## 🔧 Bibliotecas Utilizadas
+## 🔧 Libraries Used
 
 - [numpy](https://numpy.org/)
 - [matplotlib](https://matplotlib.org/)
 - [seaborn](https://seaborn.pydata.org/)
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
-O projeto está organizado em diferentes pastas conforme a tarefa proposta:
-├── regressao/
-├── classificacao_binaria/
-├── classificacao_multiclasse/
+The project is organized into different folders based on the proposed tasks:
+├── regression/
+├── binary_classification/
+├── multiclass_classification/
 
 ---
 
-## 📌 Primeira Etapa — Regressão e Classificação Binária
+## 📌 Phase 1 — Regression and Binary Classification
 
-### 🔷 Tarefa de Regressão
+### 🔷 Regression Task
 
-- **Base de dados:** `aerogerador.dat`  
-- **Objetivo:** Prever a potência gerada pelo aerogerador a partir da velocidade do vento.
-- **Modelos implementados:**
+- **Dataset:** `aerogerador.dat`  
+- **Goal:** Predict the wind turbine's generated power based on wind speed.  
+- **Implemented Models:**
   - ADALINE
-  - Perceptron de Múltiplas Camadas (MLP)
-- **Procedimentos:**
-  - Análise exploratória com gráfico de dispersão.
-  - Ajuste de hiperparâmetros com análise de _underfitting_ e _overfitting_.
-  - Validação dos modelos com Simulação de Monte Carlo (R = 250)
-  - Métrica: Erro quadrático médio (MSE)
+  - Multi-Layer Perceptron (MLP)
+- **Procedures:**
+  - Exploratory analysis with scatter plot
+  - Hyperparameter tuning with underfitting and overfitting analysis
+  - Model validation using Monte Carlo Simulation (R = 250)
+  - Metric: Mean Squared Error (MSE)
 
-### 🔷 Tarefa de Classificação Binária
+### 🔷 Binary Classification Task
 
-- **Base de dados:** `Spiral3d.csv`  
-- **Objetivo:** Classificar dados sintéticos em duas classes distintas.
-- **Modelos implementados:**
-  - Perceptron Simples
-  - Perceptron de Múltiplas Camadas (MLP)
-- **Procedimentos:**
-  - Visualização com gráfico de dispersão.
-  - Ajuste de hiperparâmetros com análise de _underfitting_ e _overfitting_.
-  - Validação com Simulação de Monte Carlo (R = 250)
-  - Métricas: Acurácia, Sensibilidade, Especificidade
-  - Matrizes de confusão para melhores e piores rodadas
-  - Curvas de aprendizado
-  - Análise estatística com média, desvio padrão, maior e menor valor para cada métrica.
+- **Dataset:** `Spiral3d.csv`  
+- **Goal:** Classify synthetic data into two distinct classes.  
+- **Implemented Models:**
+  - Simple Perceptron
+  - Multi-Layer Perceptron (MLP)
+- **Procedures:**
+  - Visualization using scatter plots
+  - Hyperparameter tuning with underfitting and overfitting analysis
+  - Validation using Monte Carlo Simulation (R = 250)
+  - Metrics: Accuracy, Sensitivity, Specificity
+  - Confusion matrices for best and worst runs
+  - Learning curves
+  - Statistical analysis with mean, standard deviation, maximum, and minimum for each metric
 
 ---
 
-## 📌 Segunda Etapa — Classificação Multiclasse
+## 📌 Phase 2 — Multiclass Classification
 
-### 🔷 Tarefa: Classificação de Condições da Coluna Vertebral
+### 🔷 Task: Classification of Vertebral Column Conditions
 
-- **Base de dados:** `coluna vertebral.csv`  
-- **Objetivo:** Classificar pacientes em três categorias:
+- **Dataset:** `coluna vertebral.csv`  
+- **Goal:** Classify patients into three categories:
   - `NO`: Normal
-  - `DH`: Hérnia de Disco
-  - `SL`: Espondilolistese
-- **Modelos implementados:**
+  - `DH`: Disk Hernia
+  - `SL`: Spondylolisthesis
+- **Implemented Models:**
   - ADAptive LINear Element (ADALINE)
-  - Perceptron de Múltiplas Camadas (MLP)
-- **Procedimentos:**
-  - Codificação one-hot dos rótulos
-  - Validação com Simulação de Monte Carlo (R = 100)
-  - Métricas: Acurácia, Sensibilidade, Especificidade
-  - Matrizes de confusão para as melhores e piores rodadas
-  - Curvas de aprendizado
-  - Análise estatística com média, desvio padrão, maior e menor valor das métricas
+  - Multi-Layer Perceptron (MLP)
+- **Procedures:**
+  - One-hot encoding of labels
+  - Validation using Monte Carlo Simulation (R = 100)
+  - Metrics: Accuracy, Sensitivity, Specificity
+  - Confusion matrices for best and worst runs
+  - Learning curves
+  - Statistical analysis with mean, standard deviation, max and min of each metric
 
 ---
 
-## ⚙️ Considerações Técnicas
+## ⚙️ Technical Considerations
 
-- Todos os modelos requerem **normalização dos dados**.
-- O critério de convergência utilizado nos treinamentos foi o **número máximo de épocas**.
-- Os hiperparâmetros dos modelos foram escolhidos com base em experimentação e análise dos resultados obtidos.
-
----
-
-## 📊 Exemplos de Visualizações
-
-O projeto utiliza visualizações com `matplotlib` e `seaborn`, incluindo:
-
-- Gráficos de dispersão
-- Curvas de aprendizado
-- Matrizes de confusão (com `heatmap`)
-- Análises estatísticas (Boxplot, Violinplot)
+- All models require **data normalization**.
+- The convergence criterion for training was the **maximum number of epochs**.
+- Model hyperparameters were chosen based on experimentation and result analysis.
 
 ---
 
-## 👨‍💻 Autor
+## 📊 Visualization Examples
 
-Este projeto foi desenvolvido por João Pedro Monteiro como parte da disciplina de Inteligência Artificial aplicada a Redes Neurais Artificiais na graduação em Ciência da Computação.
+The project uses visualizations with `matplotlib` and `seaborn`, including:
+
+- Scatter plots
+- Learning curves
+- Confusion matrices (using `heatmap`)
+- Statistical analysis (Boxplot, Violinplot)
 
 ---
 
+## 👨‍💻 Author
+
+This project was developed by João Pedro Monteiro as part of the Artificial Intelligence course on Artificial Neural Networks in the Computer Science undergraduate program.
